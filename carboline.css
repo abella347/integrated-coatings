@@ -1,0 +1,13 @@
+.carbo-img{
+    overflow: hidden;
+}
+.carbo-img video{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.carbo-section2{
+    width: var(--section-width);
+    margin-inline: auto;
+}

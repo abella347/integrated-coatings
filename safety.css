@@ -1,0 +1,18 @@
+.safety-bg {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./INTEGRATED-COATINGS/saftey-img/Website-category-bannergrsfss.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+}
+.gridboximg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gridboximg {
+    overflow: hidden;
+    height: auto;
+}

@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+:root {
+  --main-colour: #f2f1f0;
+  --font-style1: Outfit;
+  --font-style2: Poppins;
+  --font-style3: Roboto;
+  --font-style4: Montserrat;
+  --section-width: min(1650px, 90%);
+  --text-color: #666666;
+  --text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  --header-color: #333333;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.abrasive-bg {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.01)),
+    url("./INTEGRATED-COATINGS/abrasive-img/SA-Grit-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+}
+
+.abrasive-hero-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  color: white;
+  font-family: var(--font-style4);
+}
+
+.abrasive-hero-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: var(--text-shadow);
+}
+
+.abrasive-hero-section p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
+.main {
+  /* border: 2px solid red; */
+  padding: 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.filter {
+  /* border: 2px solid black; */
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  text-transform: capitalize;
+  font-family: var(--font-style3);
+  padding: 2rem 0 4rem 2rem;
+  background-color: #f5f5f5;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.filter h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.filter h3 {
+  color: #004aad;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.filter ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-top: 1rem;
+}
+
+.filter li {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.filter li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #64504f;
+  text-decoration: none;
+  transition:
+    color 0.18s,
+    transform 0.12s;
+}
+
+.filter li i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.filter li.active a,
+.filter li:hover a {
+  color: #0558c5;
+}
+.filter ul li i {
+  color: #777777;
+  transition:
+    color 0.18s,
+    transform 0.12s;
+}
+
+.filter li.active i,
+.filter li:hover i {
+  background-color: #0558c5;
+  color: white;
+  border-radius: 50%;
+  transform: translateX(2px);
+}
+
+.filter li i.active-icon {
+  background-color: #0558c5;
+  border-radius: 50%;
+  transform: translateX(2px);
+}
+
+.abrasive-boxes {
+  border: 1px solid #e5e5e5;
+  /* height: 100%; */
+  width: 100%;
+  flex: 4;
+  padding: 2rem 1rem;
+}
+.abrasive-gridboxes {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.sec1-abrasivebox {
+  /* border: 1px solid #666666; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.abrasive-boxes-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.abrasive-boxes-img {
+  overflow: hidden;
+}
+
+.abrasiveboxtext {
+  line-height: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 0.2px solid #d0d0d0;
+  background-color: #fdfdfd;
+  height: 32vh;
+}
+
+.abrasiveboxtext h3 {
+  font-family: var(--font-style4);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+.abrasiveboxtext p {
+  font-family: var(--font-style4);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.abrv-header h3 {
+  text-align: center;
+  font-size: 26px;
+  font-family: var(--font-style3);
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333333;
+  padding: 1rem;
+}
+.abrv-header {
+  background-color: #f2f4f5;
+}
+
+@media only screen and (max-width: 1025px) {
+  .main{
+    flex-direction: column;
+  }
+  .abrasive-gridboxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridboximg {
+    height: auto;
+  }
+
+  .blasting-filter {
+    flex: 1.8;
+  }
+  .abrasive-hero-section p{
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .abrasive-gridboxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filter {
+    flex: 2;
+  }
+}

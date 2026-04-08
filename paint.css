@@ -1,0 +1,157 @@
+:root {
+  --main-colour: #f2f1f0;
+  --font-style1: Outfit;
+  --font-style2: Poppins;
+  --section-width: min(1650px, 90%);
+  --text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  --font-style3: Roboto;
+  --font-style4: Montserrat;
+  --text-color: #666666;
+  --header-color: #333333;
+}
+
+.paints-bg {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("./INTEGRATED-COATINGS/paint/protective-and-marine.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+.paint-hero-sec {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 2rem;
+  color: white;
+  font-family: Roboto;
+}
+
+.paint-h2 {
+  font-size: 45px;
+  font-weight: 800;
+  text-shadow: var(--text-shadow);
+}
+
+.header-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-btns button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #1a3390;
+  font-family: var(--font-style1);
+}
+
+.header-btns button a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.header-btns button:hover {
+  background-color: #0d1b4c;
+}
+
+.section1 {
+  background-color: #f5f6f7;
+}
+
+.sec1-header h1 {
+  width: var(--section-width);
+  margin-inline: auto;
+  padding-top: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #003c54;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.sec2-header h1 {
+  width: var(--section-width);
+  margin-inline: auto;
+  padding-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #003c54;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.sec1-header h1,
+.sec2-header h1 {
+  scroll-margin-top: 150px;
+}
+
+.paint-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 4rem 3rem 4rem;
+  /* border: 2px solid black; */
+}
+.paint-boxes {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+.img-box {
+  overflow: hidden;
+  display: block;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.box-text {
+  display: flex;
+  flex-direction: column;
+}
+.heading-text a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a86b2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.heading-text a:hover {
+  text-decoration: underline;
+}
+
+.heading-text {
+  padding: 1rem 0 0.5rem 0;
+}
+.paint-para a {
+  text-decoration: none;
+  color: #4d5e65;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .paint-parent {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+:root {
+  --main-colour: #f2f1f0;
+  --font-style1: Outfit;
+  --font-style2: Poppins;
+  --font-style3: Roboto;
+  --font-style4: Montserrat;
+  --section-width: min(1650px, 90%);
+  --text-color: #666666;
+  --text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  --header-color: #333333;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+.intl-bg {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("./INTEGRATED-COATINGS/painting-images/intl-img/bg-3_high_res.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.intl-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  gap: 2rem;
+  color: white;
+  font-family: Roboto;
+}
+
+.intl-hero h2 {
+  font-size: 45px;
+  font-weight: 800;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+.intl-main {
+  display: flex;
+  margin-inline: auto;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  width: var(--section-width);
+  position: relative;
+  background-color: #f9fafc;
+  padding: 1rem;
+}
+.flex1 {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+.flex2 {
+  flex: 3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+.intl-img-container {
+  height: auto;
+  overflow: hidden;
+}
+.intl-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.header2 {
+  padding: 1rem;
+}
+.logo-header {
+  overflow: hidden;
+  padding-left: 3rem;
+  align-self: flex-end;
+}
+.logo-header img {
+  height: 70%;
+  width: 80%;
+}
+.intl-textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+.intl-iconbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: #f3f5f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.intl-icontext {
+  font-size: 17px;
+  font-family: var(--font-style3);
+  line-height: 2rem;
+  color: #656c77;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+}
+.icons {
+  padding: 1.3rem;
+  border-radius: 50%;
+  background-color: #e6e5f9;
+  color: #3c56a1;
+  font-size: 1.5rem;
+}
+
+.intl-iconbox p::first-letter {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #3c56a1;
+}
+
+/* SLIDER STYLING */
+.intl-section2 {
+  width: var(--section-width);
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+.intlSwiper {
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 5rem 4rem 5rem;
+  background-color: #f6f6f6;
+}
+
+.slider-img {
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.slider-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider-text {
+  font-family: var(--font-style4);
+  font-weight: 500;
+  line-height: 2rem;
+  /* border: 2px solid black; */
+  padding: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #606162;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+}
+.intl-span {
+  color: #1e1e1e;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1f75c4;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0057a8;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .intl-main {
+    flex-direction: column;
+  }
+  .intl-textbox {
+    padding: 0;
+  }
+  .swiper-slide {
+    padding: 3rem 2rem;
+  }
+  .intl-hero{
+    padding: 0;
+  }
+  .intl-hero h2{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .swiper-slide {
+    padding: 3rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .swiper-slide {
+    padding: 3rem 1rem;
+  }
+}

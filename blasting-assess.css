@@ -1,0 +1,40 @@
+.accessories-bg {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./INTEGRATED-COATINGS/blasting-accessories-img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+.abrasive-hero-section h2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width:1025px) {
+    .main{
+        flex-direction: column;
+    }
+    .abrasive-gridboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridboximg {
+        height: auto;
+    }
+
+    .blasting-filter {
+        flex: 1.8;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .abrasive-gridboxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filter {
+        flex: 2;
+    }
+   
+}

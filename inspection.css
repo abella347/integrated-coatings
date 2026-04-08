@@ -1,0 +1,20 @@
+.inspection-bg {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url("./INTEGRATED-COATINGS/inspection-img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+.gridboximg img {
+    /* height: 70%; */
+    width: 100%;
+    object-fit: cover;
+    padding: 20px;
+}
+
+.gridboximg {
+    overflow: hidden;
+    height: auto;
+}

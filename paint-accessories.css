@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+:root {
+  --main-colour: #f2f1f0;
+  --font-style1: Outfit;
+  --font-style2: Poppins;
+  --font-style3: Roboto;
+  --font-style4: Montserrat;
+  --section-width: min(1650px, 90%);
+  --text-color: #666666;
+  --text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  --header-color: #333333;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.paint-bg {
+  background-image: url("INTEGRATED-COATINGS/painting-img/paint-accessories/bg-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.paint-hero-sec h2{
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+.paint-hero-sec p{
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width:1025px) {
+   .main{
+    flex-direction: column;
+   }
+}
+
+@media only screen and (max-width: 920px) {
+  
+   
+}

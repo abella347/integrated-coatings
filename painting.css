@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+:root {
+    --main-colour: #f2f1f0;
+    --font-style1: Outfit;
+    --font-style2: Poppins;
+    --font-style3: Roboto;
+    --font-style4: Montserrat;
+    --section-width: min(1650px, 90%);
+    --text-color: #666666;
+    --text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    --header-color: #333333;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.painting-bg {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./INTEGRATED-COATINGS/painting-img/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+}
+
+@media only screen and (max-width:1025px) {
+    .abrasive-gridboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridboximg {
+        height: auto;
+    }
+
+    .blasting-filter {
+        flex: 1.8;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .abrasive-gridboxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filter {
+        flex: 2;
+    }
+   
+}
