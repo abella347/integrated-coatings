@@ -139,6 +139,7 @@ body {
   padding: 1rem 2rem;
   font-weight: 400;
   width: 100%;
+  border: 0.5px solid black;
 }
 
 .form-box h3 {
@@ -258,16 +259,20 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .about-section6-box {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .section9-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 880px) {
+  .about-section6-box {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .about-section6-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .text-sec .navlist {
     inset: 0 0 0 20%;
   }

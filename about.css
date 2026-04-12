@@ -390,13 +390,37 @@ body {
   background-color: #0d1b4c;
 }
 
-/* @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1030px) {
+   .sec3-choose-us {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+
+  .about-section6-box  {
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+
 }
 
 @media only screen and (max-width: 920px) {
-} */
+  .sec3-choose-us {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 2rem;
+    gap: 1.5rem;
+  }
 
-@media only screen and (max-width: 480px) {
+  .about-section6-box {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
    
   .about-hero {
     padding: 0 1rem;

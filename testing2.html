@@ -23,7 +23,37 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
+  <style>
+    /* ===== VERTICAL FLOW ANIMATION ===== */
+    .flow-box {
+      opacity: 0;
+      transform: translateY(40px); /* start from left */
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+      will-change: opacity, transform;
+    }
 
+    .flow-box.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .flow-box.delay-1 {
+      transition-delay: 0.2;
+    }
+    .flow-box.delay-2 {
+      transition-delay: 0.4s;
+    }
+    .flow-box.delay-3 {
+      transition-delay: 0.6s;
+    }
+    .flow-box.delay-4 {
+      transition-delay: 0.8s;
+    }
+    .flow-box.delay-5 {
+      transition-delay: 1s;
+    }
+  </style>
   <body>
     <div class="background">
       <nav>
@@ -165,7 +195,7 @@
         </div>
 
         <div class="section1-boxes">
-          <div class="section1-gridbox">
+          <div class="section1-gridbox flow-box delay-1">
             <div class="section1-img">
               <img src="./INTEGRATED-COATINGS/ICL-Images/blasting.jpg" alt="" />
               <div class="img-text">
@@ -174,7 +204,7 @@
               </div>
             </div>
           </div>
-          <div class="section1-gridbox">
+          <div class="section1-gridbox flow-box delay-2">
             <div class="section1-img">
               <img
                 src="./INTEGRATED-COATINGS/ICL-Images/spray-painting2.jpg"
@@ -186,7 +216,7 @@
               </div>
             </div>
           </div>
-          <div class="section1-gridbox">
+          <div class="section1-gridbox flow-box delay-3">
             <div class="section1-img">
               <img src="./INTEGRATED-COATINGS/ICL-Images/abrasive.jpg" alt="" />
               <div class="img-text">
@@ -195,7 +225,7 @@
               </div>
             </div>
           </div>
-          <div class="section1-gridbox">
+          <div class="section1-gridbox flow-box delay-4">
             <div class="section1-img">
               <img src="./INTEGRATED-COATINGS/ICL-Images/inspect.jpg" alt="" />
               <div class="img-text">
@@ -204,7 +234,7 @@
               </div>
             </div>
           </div>
-          <div class="section1-gridbox">
+          <div class="section1-gridbox flow-box delay-5">
             <div class="video">
               <video
                 autoplay
@@ -246,7 +276,7 @@
             </p>
 
             <div class="secton2-mainbox">
-              <div class="section2-smallgrid">
+              <div class="section2-smallgrid box-reveal">
                 <div class="iconsection">
                   <div class="iconbox">
                     <div class="iconbox-img">
@@ -321,7 +351,7 @@
 
     <!-- SECTION3 -->
 
-    <section>
+    <!-- <section>
       <div class="section3">
         <div class="section3-all">
           <div class="scetion3box1">
@@ -335,7 +365,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- SECTION 4 -->
 
@@ -392,7 +422,7 @@
 
     <!-- SECTION 5  -->
 
-    <section>
+    <!-- <section>
       <div class="section5">
         <div class="section5-all">
           <div class="section5-header">
@@ -469,7 +499,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- SECTION 6 -->
 
@@ -503,7 +533,7 @@
 
     <!-- SECTION 7 -->
 
-    <section>
+    <!-- <section>
       <div class="section7">
         <div class="section7boxes" id="stats-section">
           <div class="section7smallboxes">
@@ -535,11 +565,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- section 8 -->
 
-    <section>
+    <!-- <section>
       <div class="section8">
         <div class="section8-all">
           <div class="section8-header">
@@ -588,11 +618,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- SECTION 9  -->
 
-    <footer>
+    <!-- <footer>
       <section>
         <div class="section9">
           <div class="section9-all">
@@ -863,7 +893,53 @@
           </div>
         </div>
       </section>
-    </footer>
+    </footer> -->
+    <script>
+      // const flowBoxes = document.querySelectorAll(".flow-box");
+
+      // const flowObserver = new IntersectionObserver(
+      //   (entries) => {
+      //     entries.forEach((entry) => {
+      //       if (entry.isIntersecting) {
+      //         const boxes = [...flowBoxes];
+
+      //         boxes.forEach((box, index) => {
+      //           setTimeout(() => {
+      //             box.classList.add("show");
+      //           }, index * 100); // 🔥 controls the flow speed
+      //         });
+      //       }
+      //     });
+      //   },
+      //   { threshold: 0.5 },
+      // );
+
+      const flowBoxes = document.querySelectorAll(".flow-box");
+
+      const flowObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              flowBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                  box.classList.add("show");
+                }, index * 100);
+              });
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px 0px -100px 0px", // 🔥 triggers earlier
+        },
+      );
+
+      if (flowBoxes.length > 0) {
+        flowObserver.observe(flowBoxes[0]);
+      }
+
+      flowObserver.observe(flowBoxes[0]); // trigger when first box appears
+    </script>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
