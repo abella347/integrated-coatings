@@ -52,14 +52,11 @@ body {
 /* SECTION 1 STYLING */
 
 .section1 {
-  /* border: 2px solid red; */
   padding: 3rem;
 }
 
 .about-section1-header {
-  /* border: 2px solid red; */
   padding: 0rem 0;
-  text-transform: capitalize;
 }
 
 .about-section1-header h2 {

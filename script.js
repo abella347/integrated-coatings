@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  primaryNav.setAttribute("data-visible", "false");
+});
+
 let nav = document.querySelector("nav");
 const background = document.querySelector(".background");
 const section2 = document.querySelector(".section2");
@@ -15,10 +19,6 @@ const counters = document.querySelectorAll(".counter");
 const statsSection = document.querySelector("#stats-section");
 
 const overlay = document.querySelector(".overlay");
-
-const fadeElements = document.querySelectorAll(".fade-in-up");
-const boxElements = document.querySelectorAll(".box-reveal");
-const flowBoxes = document.querySelectorAll(".flow-box");
 
 // let menuOpen = false;
 
@@ -178,7 +178,7 @@ const observer = new IntersectionObserver(
   (entries, observer) => {
     if (entries[0].isIntersecting) {
       counters.forEach((counter) => countUp(counter));
-      observer.unobserve(statsSection); // run once
+      observer.unobserve(statsSection); 
     }
   },
   {
@@ -206,76 +206,3 @@ backToTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  {
-    threshold: 0.2,
-  },
-);
-
-fadeElements.forEach((el) => fadeObserver.observe(el));
-
-const boxObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 },
-);
-
-boxElements.forEach((box) => boxObserver.observe(box));
-
-// const flowObserver = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         flowBoxes.forEach((box, index) => {
-//           setTimeout(() => {
-//             box.classList.add("show");
-//           }, index * 100);
-//         });
-//       }
-//     });
-//   },
-//   {
-//     root: null,
-//     rootMargin: "0px 0px -150px 0px", // 🔥 triggers earlier
-//   },
-// );
-
-// if (flowBoxes.length > 0) {
-//   flowObserver.observe(flowBoxes[0]);
-// }
-
-// flowObserver.observe(flowBoxes[0]);
-
-const flowObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 100);
-
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    root: null,
-    rootMargin: "0px 0px -150px 0px",
-  },
-);
-
-flowBoxes.forEach((box) => flowObserver.observe(box));

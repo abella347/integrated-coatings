@@ -224,6 +224,8 @@ body {
   background-color: #f2f4f5;
 }
 
+
+
 @media only screen and (max-width: 1025px) {
   .main{
     flex-direction: column;

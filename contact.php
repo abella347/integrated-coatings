@@ -152,11 +152,11 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
 
       <!-- text section  -->
       <div class=" contact-hero">
-        <h2>
+        <h2 class="fade-in-up">
           Send Us Your Feedback, <br />
           We Love Hearing It!
         </h2>
-        <p>
+        <p class="fade-in-up delay-1">
           Our mission is timely delivery of high quality materials of excellent
           <br />
           value.
@@ -169,8 +169,8 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
     <section>
       <div class="section1">
         <div class="contact-header">
-          <h2>get in touch</h2>
-          <p>
+          <h2 class="fade-in-up delay-1">get in touch</h2>
+          <p class="fade-in-up delay-2">
             Ready to take your surface preparation to the next level? Our team
             of experts is here to assist you
             <br />
@@ -184,7 +184,7 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
         <div class="all-box">
           <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
             <div class="form-box">
-              <h3>drop your details!</h3>
+              <h3 class="fade-in-up delay-3">drop your details!</h3>
               <div class="firstname">
                 <input
                   type="text"
@@ -251,15 +251,15 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
     <section>
       <div class="section6 about-section6 contact-sec2">
         <div class="section6-header contact-sec2-header">
-          <h2>Contact Info</h2>
-          <p>
+          <h2 class="fade-in-up">Contact Info</h2>
+          <p class="fade-in-up delay-1">
             We’re here to help! Please feel free to reach out with any questions
             or requests.
           </p>
         </div>
 
         <div class="about-section6-box contact-sec2-box">
-          <div class="sec6-box">
+          <div class="sec6-box flow-box delay-1">
             <div class="sec6-icontexts">
               <i class="fa fa-phone" aria-hidden="true"></i>
 
@@ -272,14 +272,14 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
               <p>Monday - Friday 7am to 5pm WAT</p>
             </div>
           </div>
-          <div class="sec6-box">
+          <div class="sec6-box flow-box delay-2">
             <div class="sec6-icontexts">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
               <h3>email support</h3>
               <p>sales@integratedcoatings.com</p>
             </div>
           </div>
-          <div class="sec6-box">
+          <div class="sec6-box flow-box delay-3">
             <div class="sec6-icontexts">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <h3>address</h3>
@@ -574,4 +574,5 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="contact.js"></script>
+  <script src="animation.js"></script>
 </html>
