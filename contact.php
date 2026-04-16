@@ -339,7 +339,11 @@ if(isset($_POST['newsubmit']) && $_SERVER['REQUEST_METHOD'] === "POST"){
 
               <div class="section9-smallboxes">
                 <div class="section9-smalltexts">
-                  <h2>find out more about us</h2>
+                  <h2>
+                    <a class="find-more" href="about.html"
+                      >find out more about us</a
+                    >
+                  </h2>
 
                   <div class="sec9-icons">
                     <span

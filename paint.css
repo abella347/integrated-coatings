@@ -148,10 +148,45 @@
   line-height: 1.5rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1030px) {
+  .paint-parent {
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 3rem;
+    gap: 1rem;
+  }
+  .sec1-header h1 {
+    padding-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .paint-parent {
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: 1rem;
+    padding-inline: 2rem;
     gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .paint-parent {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1.5rem;
+    gap: 1rem;
+  }
+  .logo-sec-img {
+    height: 75px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .paint-parent {
+    grid-template-columns: repeat(1, 1fr);
+    padding-inline: 1.5rem;
+    gap: 1rem;
+  }
+  .section9-logoimg {
+    height: 50px;
+  }
+  .section9-boxes {
+    padding: 1rem;
   }
 }

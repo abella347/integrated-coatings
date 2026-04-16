@@ -1118,10 +1118,20 @@ nav.menu-open {
 }
 
 .section9-smalltexts h2 {
-  color: white;
   font-size: 17px;
   font-family: var(--font-style2);
   font-weight: 600;
+  color: white;
+
+}
+.find-more{
+  text-decoration: none;
+  color: white;
+  font-size: 16.5px;
+  cursor: pointer;
+}
+.find-more:hover{
+  color: #2559e9;
 }
 
 .section9-smalltexts .sec9-address {
